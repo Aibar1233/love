@@ -4,28 +4,50 @@
     <meta charset="UTF-8">
     <title>Приглашение ❤️</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Добавим немного стиля прямо здесь, чтобы видео и текст смотрелись аккуратно */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffeef2;
+            font-family: sans-serif;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        video {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover; /* Чтобы лошадь не растягивалась */
+            border-radius: 15px;
+        }
+        .btn-group {
+            margin-top: 20px;
+            position: relative;
+            height: 50px;
+        }
+        #success-screen {
+            display: none; /* Скрыто по умолчанию */
+        }
+    </style>
 </head>
 <body>
-   <video autoplay loop playsinline id="myVideo" style="width: 100%; border-radius: 20px;">
-    <source src="video.mp4" type="video/mp4">
-</video>
-        <h1>Нұржүгүл, я слышал что вы любите лошадей, пошли покатаемся ? </h1>
+    <div class="card" id="main-card">
+        <video loop playsinline id="myVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        
+        <h1>Нұржүгүл, я слышал что вы любите лошадей, пошли покатаемся?</h1>
         <p style="font-size: 12px; color: gray;">Нажми «Да» 👇</p>
+        
         <div class="btn-group">
-            <button id="yesBtn">Да</button>
-            <button id="noBtn" style="left: 170px;">Нет</button>
-        </div>
-    </div>
-
-    <div class="card" id="success-screen">
-        <h1>Спасибо, көтенчик! ❤️</h1>
-        <p>Я люблю тебя! Ты сделала мой день самым тёплым.</p>
-        <p>📍 22 март • утром • ауыл</p>
-        <a href="https://go.2gis.com/os7fg" target="_blank" class="map-btn">Открыть место в 2ГИС</a>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
-
+            <button id="yesBtn">Да</button
