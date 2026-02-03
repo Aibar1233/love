@@ -1,0 +1,39 @@
+body {
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.btn-group {
+    margin-top: 20px;
+    position: relative;
+    height: 60px;
+}
+button {
+    padding: 12px 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute; /* Важно для перемещения */
+}
+#yesBtn {
+    background: #ff4081;
+    color: white;
+    left: 10%;
+}
+#noBtn {
+    background: #e0e0e0;
+    right: 10%;
+    transition: 0.1s; /* Плавность прыжка */
+}
