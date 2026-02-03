@@ -29,4 +29,12 @@ document.addEventListener('click', () => {
     const video = document.getElementById('myVideo');
     video.muted = false; // Включаем звук
     video.play(); // Запускаем воспроизведение
+
 }, { once: true }); // Сработает только один раз
+document.addEventListener('click', function() {
+    const video = document.getElementById('myVideo');
+    if (video) {
+        video.muted = false; // Включаем звук при первом клике
+        video.play();
+    }
+}, { once: true });
