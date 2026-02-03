@@ -2,10 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение ❤️</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Добавим немного стиля прямо здесь, чтобы видео и текст смотрелись аккуратно */
         body {
             display: flex;
             justify-content: center;
@@ -13,41 +13,72 @@
             min-height: 100vh;
             margin: 0;
             background-color: #ffeef2;
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif;
         }
         .card {
             background: white;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
             max-width: 400px;
             width: 90%;
         }
         video {
             width: 100%;
-            max-height: 350px;
-            object-fit: cover; /* Чтобы лошадь не растягивалась */
+            height: auto;
+            max-height: 400px;
             border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
         .btn-group {
             margin-top: 20px;
             position: relative;
-            height: 50px;
+            height: 60px;
         }
-        #success-screen {
-            display: none; /* Скрыто по умолчанию */
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #yesBtn { background-color: #ff4d79; color: white; }
+        #noBtn { background-color: #e0e0e0; position: absolute; left: 180px; }
+        #success-screen { display: none; }
+        .map-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: #ff4d79;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="card" id="main-card">
-        <video loop playsinline id="myVideo">
+        <video autoplay muted loop playsinline id="myVideo">
             <source src="video.mp4" type="video/mp4">
         </video>
         
-        <h1>Нұржүгүл, я слышал что вы любите лошадей, пошли покатаемся?</h1>
-        <p style="font-size: 12px; color: gray;">Нажми «Да» 👇</p>
+        <h1>Нұржүгүл, жылқыларды жақсы көресің деп естідім, бірге қыдырып қайтайық? 🌷</h1>
+        <p style="font-size: 12px; color: gray;">"Иә" батырмасын бас 👇</p>
         
         <div class="btn-group">
-            <button id="yesBtn">Да</button
+            <button id="yesBtn">Иә</button>
+            <button id="noBtn">Жоқ</button>
+        </div>
+    </div>
+
+    <div class="card" id="success-screen">
+        <h1>Рахмет, көтенчик! ❤️</h1>
+        <p>Мен сені жақсы көремін! Күнің сәтті өтсін.</p>
+        <p>📍 22 наурыз • таңертең • ауыл</p>
+        <a href="https://go.2gis.com/os7fg" target="_blank" class="map-btn">📍 2ГИС-тен орынды көру</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
